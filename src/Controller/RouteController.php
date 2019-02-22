@@ -30,7 +30,7 @@ class RouteController extends AbstractController
      */
     public function loginpage()
     {
-        return $this->render('pages/login.html.twig', [
+        return $this->render('pages/login.html.php', [
 
         ]);
     }
