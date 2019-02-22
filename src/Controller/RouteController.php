@@ -24,4 +24,14 @@ class RouteController extends AbstractController
 
         ]);
     }
+
+    /**
+     * @Route("/login")
+     */
+    public function loginpage()
+    {
+        return $this->render('pages/login.html.twig', [
+
+        ]);
+    }
 }
