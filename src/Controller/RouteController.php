@@ -34,4 +34,26 @@ class RouteController extends AbstractController
 
         ]);
     }
+
+
+
+    /**
+     * @Route("/about")
+     */
+    public function aboutpage()
+    {
+        return $this->render('pages/about.html.twig', [
+
+        ]);
+    }
+
+    /**
+     * @Route("/sites")
+     */
+    public function sitespage()
+    {
+        return $this->render('pages/sites.html.twig', [
+
+        ]);
+    }
 }
