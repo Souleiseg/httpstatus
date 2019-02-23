@@ -14,7 +14,15 @@ Avec Php et Symfony, développement d'un site et API qui :
 * Todo
 
 ## Accès (Après installation et lancement)
+```
+composer install
+```
+
 * [LocalHost sur le port 8000](http://localhost:8000/login)
+
+```
+php bin/console server:start 0.0.0.0:8000
+```
 
 ## Membres du projet
 
