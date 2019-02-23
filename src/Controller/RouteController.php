@@ -16,9 +16,9 @@ use Symfony\Component\HttpFoundation\Response;
 class RouteController extends AbstractController
 {
     /**
-     * @Route("/home")
+     * @Route("/api/")
      */
-    public function homepage()
+    public function homePage()
     {
         return $this->render('pages/homepage.html.twig', [
             'user' => 'admin'
@@ -28,7 +28,7 @@ class RouteController extends AbstractController
     /**
      * @Route("/login")
      */
-    public function loginpage()
+    public function loginPage()
     {
         return $this->render('pages/login.html.php', [
 
@@ -40,7 +40,7 @@ class RouteController extends AbstractController
     /**
      * @Route("/about")
      */
-    public function aboutpage()
+    public function aboutPage()
     {
         return $this->render('pages/about.html.twig', [
 
@@ -48,12 +48,41 @@ class RouteController extends AbstractController
     }
 
     /**
-     * @Route("/sites")
+     * @Route("/api/list")
      */
-    public function sitespage()
+    public function sitesPage()
     {
-        return $this->render('pages/sites.html.twig', [
+        return $this->render('pages/sites.html.php', [
 
         ]);
     }
+
+    /**
+     * @Route("/api/delete/{$id}")
+     */
+    public function deleteSite($id){
+        return $this->render('pages/sites.html.php', [
+        ]);
+    }
+
+    /**
+     * @Route("/api/status/")
+     */
+    public function siteStatus(){
+    }
+
+    /**
+     * @Route("/api/history/")
+     */
+    public function siteHistory(){
+
+    }
+
+    /**
+     * @Route("/api/add/")
+     */
+    public function addMore(){
+
+    }
+
 }
