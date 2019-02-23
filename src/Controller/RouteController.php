@@ -21,7 +21,7 @@ class RouteController extends AbstractController
     public function homepage()
     {
         return $this->render('pages/homepage.html.twig', [
-
+            'user' => 'admin'
         ]);
     }
 
