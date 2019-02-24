@@ -3,11 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UsersRepository")
  */
-class Users
+class Users implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -87,5 +88,19 @@ class Users
         $this->api_key = $api_key;
 
         return $this;
+    }
+
+    public function getSalt()
+    {
+        // leaving blank
+    }
+    public function eraseCredentials()
+    {
+        // leaving blank
+    }
+
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
     }
 }
