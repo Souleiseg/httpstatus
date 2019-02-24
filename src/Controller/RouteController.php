@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Response;
 class RouteController extends AbstractController
 {
     /**
-     * @Route("/api/")
+     * @Route("/api/", name="home")
      */
     public function homePage()
     {
@@ -26,19 +26,7 @@ class RouteController extends AbstractController
     }
 
     /**
-     * @Route("/login")
-     */
-    public function loginPage()
-    {
-        return $this->render('pages/login.html.php', [
-
-        ]);
-    }
-
-
-
-    /**
-     * @Route("/about")
+     * @Route("/about", name="about")
      */
     public function aboutPage()
     {
@@ -47,42 +35,5 @@ class RouteController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/api/list")
-     */
-    public function sitesPage()
-    {
-        return $this->render('pages/sites.html.php', [
-
-        ]);
-    }
-
-    /**
-     * @Route("/api/delete/{$id}")
-     */
-    public function deleteSite($id){
-        return $this->render('pages/sites.html.php', [
-        ]);
-    }
-
-    /**
-     * @Route("/api/status/")
-     */
-    public function siteStatus(){
-    }
-
-    /**
-     * @Route("/api/history/")
-     */
-    public function siteHistory(){
-
-    }
-
-    /**
-     * @Route("/api/add/")
-     */
-    public function addMore(){
-
-    }
 
 }
